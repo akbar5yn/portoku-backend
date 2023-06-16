@@ -21,9 +21,9 @@ app.use(
 );
 app.use(express.urlencoded({ extended: false }));
 
-// app.use("/", (req, res) => {
-//   res.json({ message: "server successful" });
-// });
+app.use("/", (req, res) => {
+  res.json({ message: "server successful" });
+});
 
 app.use("/users", require("./app/routes/userRoutes"));
 
