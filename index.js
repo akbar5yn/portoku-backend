@@ -27,5 +27,3 @@ app.use("/users", require("./app/routes/userRoutes"));
 app.listen(port, () => {
   console.log(`server started at port http://localhost:${port}/`);
 });
-
-module.exports.handler = serverless(app);
