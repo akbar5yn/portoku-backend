@@ -30,7 +30,6 @@ const registerUser = asyncHandler(async (req, res) => {
   if (userExists) {
     res.status(400);
     return res.json({
-      status: 'email-already-used',
       message: "Email sudah digunakan oleh user lain",
     });
   }
