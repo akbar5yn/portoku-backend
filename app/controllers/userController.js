@@ -43,6 +43,7 @@ const registerUser = asyncHandler(async (req, res) => {
 
   if (user) {
     res.status(201).json({
+      status: 201,
       data: {
         _id: user.id,
         username: user.username,
@@ -53,6 +54,7 @@ const registerUser = asyncHandler(async (req, res) => {
   } else {
     res.status(400);
     return res.json({
+      status: 400,
       message: "gagal membuat data user",
     });
   }
