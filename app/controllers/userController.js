@@ -34,7 +34,7 @@ const registerUser = asyncHandler(async (req, res) => {
     });
   }
 
-  // Create User
+  //NOTE -  Create User
   const user = await User.create({
     username,
     email,
@@ -69,6 +69,7 @@ const loginUser = asyncHandler(async (req, res) => {
   console.log(user);
   if (user && user.password === password) {
     res.status(200).json({
+      status: 200,
       message: "Login successful",
       data: {
         ...user._doc,
